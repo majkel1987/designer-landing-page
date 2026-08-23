@@ -1,0 +1,123 @@
+.audience {
+  padding-block: var(--section-space-large);
+}
+
+.sectionHeader {
+  max-inline-size: 45rem;
+}
+
+.sectionHeader p {
+  margin-block-start: var(--space-6);
+  color: var(--color-text);
+  color: color-mix(in srgb, var(--color-muted) 95%, var(--color-text));
+  font-size: var(--type-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  line-height: var(--line-height-body-lg);
+}
+
+.grid {
+  display: grid;
+  margin-block-start: 2.25rem;
+  border-block-end: var(--border-default);
+}
+
+.group {
+  min-inline-size: 0;
+  padding-block: 1.75rem;
+  border-block-start: var(--border-default);
+}
+
+.group p {
+  margin-block-start: var(--space-4);
+  color: var(--color-text);
+  color: color-mix(in srgb, var(--color-muted) 95%, var(--color-text));
+  line-height: var(--line-height-body);
+}
+
+.scopeList {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scopeList li {
+  position: relative;
+  min-inline-size: 0;
+  padding-inline-start: var(--space-5);
+  font-size: var(--type-small);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-small);
+}
+
+.scopeList li::before {
+  position: absolute;
+  inset-block-start: 0.7em;
+  inset-inline-start: 0;
+  inline-size: var(--space-3);
+  block-size: var(--border-width);
+  background: var(--color-secondary);
+  content: '';
+}
+
+.primaryGroup .scopeList li::before {
+  background: var(--color-accent);
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-block-start: var(--space-10);
+  }
+
+  .group {
+    padding: var(--space-8);
+  }
+
+  .primaryGroup {
+    border-block-start: var(--border-default);
+    grid-column: 1 / -1;
+  }
+
+  .group:not(.primaryGroup):last-child {
+    border-inline-start: var(--border-default);
+  }
+
+  .scopeList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    margin-block-start: var(--space-14);
+  }
+
+  .group {
+    padding: var(--space-8);
+  }
+
+  .primaryGroup {
+    padding-inline-start: 0;
+    border-inline-end: var(--border-default);
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .group:not(.primaryGroup) {
+    padding-inline-end: 0;
+    grid-column: 2;
+  }
+
+  .group:not(.primaryGroup):last-child {
+    border-inline-start: 0;
+    grid-row: 2;
+  }
+
+  .primaryGroup .scopeList {
+    max-inline-size: 34rem;
+  }
+}
