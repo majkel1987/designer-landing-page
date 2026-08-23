@@ -50,11 +50,9 @@ export function ProcessSection() {
         </header>
 
         <div className={styles.timeline}>
-          <span className={styles.axis} aria-hidden="true" />
           <ol className={styles.steps}>
             {processSteps.map((step) => (
               <li key={step.id} className={styles.step}>
-                <span className={styles.node} aria-hidden="true" />
                 <span className={styles.number}>{step.id}</span>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>

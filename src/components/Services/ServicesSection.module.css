@@ -9,8 +9,7 @@
 
 .sectionHeader p {
   margin-block-start: var(--space-6);
-  color: var(--color-text);
-  color: color-mix(in srgb, var(--color-muted) 95%, var(--color-text));
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
   font-size: var(--type-body-lg);
   letter-spacing: var(--tracking-body-lg);
   line-height: var(--line-height-body-lg);
@@ -52,8 +51,7 @@
 }
 
 .description {
-  color: var(--color-text);
-  color: color-mix(in srgb, var(--color-muted) 95%, var(--color-text));
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
   line-height: var(--line-height-body);
 }
 

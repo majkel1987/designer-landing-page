@@ -8,8 +8,7 @@
 
 .sectionHeader p {
   margin-block-start: var(--space-6);
-  color: var(--color-text);
-  color: color-mix(in srgb, var(--color-muted) 95%, var(--color-text));
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
   font-size: var(--type-body-lg);
   letter-spacing: var(--tracking-body-lg);
   line-height: var(--line-height-body-lg);
@@ -29,8 +28,7 @@
 
 .group p {
   margin-block-start: var(--space-4);
-  color: var(--color-text);
-  color: color-mix(in srgb, var(--color-muted) 95%, var(--color-text));
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
   line-height: var(--line-height-body);
 }
 
@@ -92,6 +90,7 @@
 
 @media (min-width: 64rem) {
   .grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
     grid-template-rows: repeat(2, minmax(0, 1fr));
     margin-block-start: var(--space-14);
   }
