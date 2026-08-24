@@ -183,7 +183,9 @@
     position: relative;
     display: flex;
     min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
     align-items: center;
+    justify-content: center;
     font-size: var(--type-small);
     font-weight: var(--font-weight-medium);
     text-decoration: none;

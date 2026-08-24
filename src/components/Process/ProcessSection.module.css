@@ -1,6 +1,5 @@
 .process {
-  padding-block: calc(var(--section-space-medium) - var(--space-4))
-    var(--section-space-medium);
+  padding-block: var(--section-space-medium);
   scroll-margin-block-start: var(--space-16);
 }
 
@@ -43,7 +42,7 @@
 }
 
 .number {
-  color: var(--color-muted);
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
   font-size: var(--type-technical-label);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.1em;
@@ -64,12 +63,6 @@
   color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
   font-size: var(--type-body);
   line-height: var(--line-height-body);
-}
-
-@media (min-width: 40rem) {
-  .process {
-    padding-block-start: calc(var(--section-space-medium) - var(--space-5));
-  }
 }
 
 @media (min-width: 48rem) {
@@ -100,7 +93,6 @@
 
 @media (min-width: 64rem) {
   .process {
-    padding-block-start: calc(var(--section-space-medium) - var(--space-8));
     scroll-margin-block-start: 4.5rem;
   }
 
