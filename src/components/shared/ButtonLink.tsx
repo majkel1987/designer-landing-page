@@ -3,7 +3,7 @@ import styles from './ButtonLink.module.css'
 
 interface ButtonLinkProps {
   readonly children: ReactNode
-  readonly href: `#${string}`
+  readonly href: `#${string}` | `mailto:${string}`
   readonly variant?: 'primary' | 'secondary'
   readonly className?: string
   readonly onClick?: MouseEventHandler<HTMLAnchorElement>

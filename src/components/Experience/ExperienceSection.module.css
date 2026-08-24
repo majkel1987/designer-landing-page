@@ -1,0 +1,119 @@
+.experience {
+  padding-block: var(--section-space-large);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sectionHeader {
+  max-inline-size: 45rem;
+}
+
+.sectionHeader h2 {
+  max-inline-size: 100%;
+}
+
+.sectionHeader p {
+  margin-block-start: var(--space-6);
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
+  font-size: var(--type-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  line-height: var(--line-height-body-lg);
+}
+
+.evidence {
+  margin-block-start: var(--space-10);
+}
+
+.matrix {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border-block: var(--border-default);
+  list-style: none;
+}
+
+.area {
+  min-inline-size: 0;
+  padding-block: var(--space-8);
+}
+
+.area + .area {
+  border-block-start: var(--border-default);
+}
+
+.area h3 {
+  max-inline-size: 21ch;
+}
+
+.area p {
+  margin-block-start: 0.875rem;
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
+  line-height: var(--line-height-body);
+}
+
+.ndaNote {
+  max-inline-size: none;
+  margin-block-start: var(--space-8);
+  padding: var(--space-5);
+  border-inline-start: 2px solid var(--color-accent);
+  background: var(--color-surface-subtle);
+  font-size: var(--type-small);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-small);
+}
+
+@media (min-width: 48rem) {
+  .evidence {
+    margin-block-start: var(--space-12);
+  }
+
+  .matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: var(--border-default);
+  }
+
+  .area {
+    padding: 1.75rem;
+  }
+
+  .area + .area {
+    border-block-start: 0;
+  }
+
+  .area:nth-child(even) {
+    border-inline-start: var(--border-default);
+  }
+
+  .area:nth-child(n + 3) {
+    border-block-start: var(--border-default);
+  }
+}
+
+@media (min-width: 64rem) {
+  .layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--grid-gap);
+    align-items: start;
+  }
+
+  .sectionHeader {
+    grid-column: 1 / span 5;
+    padding-inline-end: var(--space-6);
+  }
+
+  .sectionHeader h2 {
+    max-inline-size: 12ch;
+  }
+
+  .evidence {
+    grid-column: 6 / span 7;
+    margin-block-start: 0;
+  }
+
+  .area {
+    padding: var(--space-8);
+  }
+}

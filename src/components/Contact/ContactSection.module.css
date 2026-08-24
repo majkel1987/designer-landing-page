@@ -1,0 +1,111 @@
+.contact {
+  scroll-margin-block-start: var(--space-16);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  padding-block: var(--section-space-large);
+  border-block-start: var(--border-default);
+}
+
+.content {
+  min-inline-size: 0;
+}
+
+.eyebrow {
+  margin-block-end: var(--space-6);
+  color: var(--color-accent);
+  font-size: var(--type-technical-label);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-technical-label);
+  line-height: var(--line-height-technical-label);
+}
+
+.content h2 {
+  max-inline-size: 13ch;
+}
+
+.body {
+  max-inline-size: 54ch;
+  margin-block-start: 1.75rem;
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
+  font-size: var(--type-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  line-height: var(--line-height-body-lg);
+}
+
+.actions {
+  display: flex;
+  margin-block-start: 2.25rem;
+}
+
+.actions a {
+  inline-size: 100%;
+}
+
+.channels {
+  align-self: end;
+  border-block-start: var(--border-default);
+  font-style: normal;
+}
+
+.channel {
+  display: grid;
+  min-block-size: 3.25rem;
+  gap: var(--space-2);
+  padding-block: 1.125rem;
+  border-block-end: var(--border-default);
+}
+
+.channelLabel {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  line-height: var(--line-height-technical-label);
+  text-transform: uppercase;
+}
+
+.channelValue {
+  font-size: var(--type-body);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-small);
+}
+
+@media (min-width: 48rem) {
+  .actions a {
+    inline-size: auto;
+  }
+
+  .layout {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    column-gap: var(--grid-gap);
+  }
+
+  .content {
+    grid-column: 1 / span 5;
+  }
+
+  .channels {
+    grid-column: 6 / span 3;
+  }
+}
+
+@media (min-width: 64rem) {
+  .contact {
+    scroll-margin-block-start: 4.5rem;
+  }
+
+  .layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .content {
+    grid-column: 1 / span 7;
+  }
+
+  .channels {
+    grid-column: 9 / span 4;
+  }
+}

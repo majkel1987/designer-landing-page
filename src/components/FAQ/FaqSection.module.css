@@ -1,0 +1,117 @@
+.faq {
+  padding-block: var(--section-space-large);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sectionHeader {
+  max-inline-size: 45rem;
+}
+
+.sectionHeader h2 {
+  max-inline-size: 10ch;
+}
+
+.sectionHeader p {
+  margin-block-start: var(--space-6);
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
+  font-size: var(--type-body-lg);
+  letter-spacing: var(--tracking-body-lg);
+  line-height: var(--line-height-body-lg);
+}
+
+.groups {
+  display: grid;
+  gap: var(--space-12);
+  margin-block-start: var(--space-10);
+}
+
+.group {
+  min-inline-size: 0;
+}
+
+.groupTitle {
+  padding-block: var(--space-4);
+  border-block-start: var(--border-default);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  line-height: var(--line-height-technical-label);
+  text-transform: uppercase;
+}
+
+.item {
+  border-block-end: var(--border-default);
+}
+
+.item summary {
+  display: grid;
+  min-block-size: 4rem;
+  grid-template-columns: minmax(0, 1fr) 1.5rem;
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: var(--space-5);
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1vw + 0.8rem, 1.25rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.35;
+  list-style: none;
+  cursor: pointer;
+}
+
+.item summary::-webkit-details-marker {
+  display: none;
+}
+
+.item summary:hover {
+  color: var(--color-accent);
+}
+
+.item p {
+  max-inline-size: var(--measure-body);
+  padding-block-end: var(--space-6);
+  padding-inline-end: var(--space-8);
+  color: color-mix(in srgb, var(--color-muted) 85%, var(--color-text));
+  line-height: var(--line-height-body);
+}
+
+.chevron {
+  inline-size: 0.625rem;
+  block-size: 0.625rem;
+  justify-self: center;
+  border-inline-end: var(--border-width) solid currentColor;
+  border-block-end: var(--border-width) solid currentColor;
+  transform: translateY(-0.125rem) rotate(45deg);
+  transition: transform var(--duration-interactive) var(--ease-interactive);
+}
+
+.item[open] .chevron {
+  transform: translateY(0.125rem) rotate(225deg);
+}
+
+@media (min-width: 48rem) {
+  .groups {
+    margin-block-start: var(--space-12);
+  }
+}
+
+@media (min-width: 64rem) {
+  .layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--grid-gap);
+    align-items: start;
+  }
+
+  .sectionHeader {
+    grid-column: 1 / span 4;
+  }
+
+  .groups {
+    grid-column: 6 / span 7;
+    margin-block-start: 0;
+  }
+}
